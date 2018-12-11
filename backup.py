@@ -32,7 +32,7 @@ if not os.path.isdir(today):
  print 'Successfully created directory' , today
 #
 ## 7. 执行linux备份命令，获取返回值，成功则输出Successful，不成功则输出Backup FAILED
-zip_command = "zip -qr '%s' %s" % (target, ' '.join(source)) 
+zip_command = "zip -qr %s %s" % (target, ' '.join(source)) 
 if os.system(zip_command) == 0:
  print 'Successful backup to', target 
 else:
