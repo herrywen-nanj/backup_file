@@ -2,6 +2,7 @@
 # - * - coding: utf-8 - * -
 #作用，分别计算每个文本的单词数，并且输出所有文本的单词总数
 a = []
+sum = 0 
 def count_words(filename):
 #filename = '1.txt'
  try:
@@ -21,5 +22,8 @@ filenames = [ '1.txt','2.txt','3.txt' ]
 for filename in filenames:
  count_words(filename)
 
+for i in a:
+ sum += int(i)
+print sum
 #sum的参数是一个list，这里a就是list
-print '所有单词总数为' + str(sum(a))
+#print '所有单词总数为' + str(sum(a))
