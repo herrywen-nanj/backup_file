@@ -11,6 +11,7 @@ def count_words(filename):
  except IOError:
   print 'you have' + ' ' + filename + ' is not exist!'
  else:
+  #split方法分隔符：默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等，http://www.runoob.com/python/att-string-split.html
   words = t.split()
   numbers = len(words)
   a.append(numbers)
