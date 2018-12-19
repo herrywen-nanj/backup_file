@@ -37,6 +37,13 @@ def get_report():
 get_report()
 
 
+ 1.安装yum install -y  virt-*  libvirt  bridge-utils qemu-img
+ 2.mkdir /kvm_data && mkfs.xfs /dev/sdb && mount /dev/sdb /kvm_data
+ 3.systemctl start  libvirtd
+4.安装kvm:virt-install --name=aminglinux01 --memory=512,maxmemory=1024 --vcpus=1,maxvcpus=2 --os-type=linux --os-variant=rhel7 --location=/kvm_data/CentOS-7-x86_64-DVD-1804.iso --disk path=/kvm_data/aminglinux01.img,size=10 --bridge=br0 --graphics=none --console=pty,target_type=serial  --extra-args="console=tty0 console=ttyS0"
+5.pip install numpy -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+
+
 
 
 
