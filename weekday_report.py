@@ -7,6 +7,7 @@ string_date = '%Y年-%m月-%d日'
 weekdate = []
 raw_content = []
 def getYesterday(): 
+   """ 获取一周每天的时间戳且格式化 """
     today=datetime.date.today()
     #weekdate.append(today)
     for i in range(0,5):
@@ -20,6 +21,7 @@ weekdate.reverse()
 
 
 def get_rawcontent():
+    """ 获取周报内容 """
  j = 0
  while j< 5:
   content = raw_input("please input you content: ")
@@ -28,6 +30,7 @@ def get_rawcontent():
 get_rawcontent()
 
 def get_report():
+    """ 整合内容 """
  for i in range(0,5):
    count_report = weekdate[i] + ' ' + raw_content[i] + "\n"
    with open(filename,'a') as file_object:
