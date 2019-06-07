@@ -17,12 +17,14 @@ def getTitle(url):
     except ArithmeticError as e:           #标签异常处理
         return "标签异常"
     return title
-filename = "url.txt"
-with open(filename)  as  file_object:
-    lines = file_object.readlines()
-for url in lines:
-    title =getTitle(url)
-    if title == NOne:
-        print("title  没有找到")
-    else:
-        print(title)
+
+def detect_website():
+     filename = "url.txt"
+     with open(filename)  as  file_object:
+          lines = file_object.readlines()
+     for url in lines:
+          title =getTitle(url)
+          if title == NOne:
+             return "title  没有找到"
+          else:
+             return title
