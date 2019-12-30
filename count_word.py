@@ -29,3 +29,5 @@ print sum
 #两种写法，一个是用sum计数，一个用sum函数，
 #sum的参数是一个list，这里a就是list
 #print '所有单词总数为' + str(sum(a))
+#python3
+#print("your name is %s" %name)
